@@ -6,7 +6,7 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - ./backend/instance:/app/instance
+      - /vol1/1000/docker/gas:/app/instance
     restart: unless-stopped
   
   frontend:
@@ -16,3 +16,4 @@ services:
     restart: unless-stopped
     depends_on:
       - backend
+
